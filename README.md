@@ -5,14 +5,18 @@ It's an assignment for the job
 
 Desktop
 
-![image](https://github.com/Kuldeep-Kumar-Sharma/weight-tracker/blob/master/screenshots/mobile-weight-tracker.png)
+![image](https://github.com/Kuldeep-Kumar-Sharma/weight-tracker/blob/master/screeshots/desktop-weight-tracker.png)
 
 
 Mobile
-![image](https://github.com/Kuldeep-Kumar-Sharma/weight-tracker/blob/master/screenshots/desktop-weight-tracker.png)
+![image](https://github.com/Kuldeep-Kumar-Sharma/weight-tracker/blob/master/screeshots/mobile-weight-tracker.png)
 
 
-Popup with Desktop
+# Gaps explained here:
+- No data is been sent anywhere as I haven't created any backend, but if I did I would have send the data via post call to the backend and would have created a button to sync or on addition of every weight in the array.
+- there is no use of Redux, but Redux would have optimised the data flow, but as use case was not complex , I didn't used any extra API.
+- Google react charts were used as they already had something for the charts.
+- There are not test cases, as everything completely passing of data flow, no utility logic, hence snapshot testing would have just increase the time with no added benefit, except the check of array of items for weight list.
 
 
 # Getting Started with Create React App

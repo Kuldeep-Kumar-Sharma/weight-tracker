@@ -7,9 +7,6 @@ import { WeightList } from "./components/WeightList";
 function App() {
   const [weightObjects, setWeightObjects] = useState([]);
 
-  useEffect(() => {
-    console.log(weightObjects);
-  }, [weightObjects]);
   return (
     <>
       <Navigation title="Weight Tracker" />
