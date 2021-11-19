@@ -1,24 +1,30 @@
-import logo from './logo.svg';
-import './App.css';
+import { useEffect, useState } from "react";
+import { Navigation } from "./components/Navigation";
+import { WeightInput } from "./components/WeightInput";
+import { TimeLine } from "./components/TimeLine";
+import { WeightList } from "./components/WeightList";
 
 function App() {
+  const [weightObjects, setWeightObjects] = useState([]);
+
+  useEffect(() => {
+    console.log(weightObjects);
+  }, [weightObjects]);
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Navigation title="Weight Tracker" />
+      {weightObjects.length > 0 && <TimeLine weightObjects={weightObjects} />}
+      <WeightInput
+        weightObjects={weightObjects}
+        setWeightObjects={setWeightObjects}
+      />
+      {weightObjects.length > 0 && (
+        <WeightList
+          weightObjects={weightObjects}
+          setWeightObjects={setWeightObjects}
+        />
+      )}
+    </>
   );
 }
 
