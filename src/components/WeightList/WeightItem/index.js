@@ -16,7 +16,7 @@ export function WeightItem(props) {
       <ItemButton>
         <Button
           onClick={() => {
-            props.deleteId(props.weightObject.id);
+            props.deleteWeightItemById(props.weightObject.id);
           }}
         >
           X

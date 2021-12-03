@@ -5,16 +5,12 @@ export function WeightList(props) {
 
   return (
     <Wrapper>
-      {props.weightObjects &&
-        props.weightObjects.length > 0 &&
-        props.weightObjects.map((item) => (
-          <WeightItem weightObject={item} deleteId={(id) => {
-            console.log(id);
-            props.setWeightObjects([
-              ...props.weightObjects.filter((x) => {
+      {props.weightObjects.map((item) => (
+          <WeightItem key={item.id} weightObject={item} deleteWeightItemById={(id) => {
+            props.setWeightObjects(props.weightObjects.filter((x) => {
                 return x.id !== id;
               }),
-            ])
+            )
           }}/>
         ))}
     </Wrapper>
