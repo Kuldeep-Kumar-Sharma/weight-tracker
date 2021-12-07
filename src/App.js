@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { Navigation } from "./components/Navigation";
 import { WeightInput } from "./components/WeightInput";
 import { TimeLine } from "./components/TimeLine";
